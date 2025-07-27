@@ -1,0 +1,14 @@
+{
+  "name": "ci-cd-app",
+  "version": "1.0.0",
+  "description": "Simple CI/CD Node.js App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Seeman.P",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
