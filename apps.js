@@ -6,6 +6,7 @@ app.get('/', (req, res) => {
   res.send('CI/CD pipeline is working!');
 });
 
-app.listen(port, () => {
-  console.log(`App running at http://localhost:${port}`);
+// ✅ Important: listen on 0.0.0.0 to accept external traffic
+app.listen(port, '0.0.0.0', () => {
+  console.log(`App running at http://0.0.0.0:${port}`);
 });
