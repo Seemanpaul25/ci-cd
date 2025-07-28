@@ -1,10 +1,10 @@
-# Example: Node.js app
-FROM node:18-alpine
+# Use official lightweight Nginx image
+FROM nginx:alpine
 
-WORKDIR /app
-COPY -r 2117_infinite_loop ./
-RUN npm install
-COPY . .
+# Copy your static site files to the default nginx HTML folder
+COPY 2117_infinite_loop/ /usr/share/nginx/html/
 
-EXPOSE 3000
-CMD ["node", "2117_infinite_loop/index.html"]
+# Expose port 80
+EXPOSE 80
+
+# Nginx starts automatically as the container's main process
